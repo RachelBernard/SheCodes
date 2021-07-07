@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vegan in 2022</title>
+  </head>
+  <body>
+    <style>
+      
+        h1 {
+            text-align: center;
+            font-weight: 300;
+            color: #00917C;
+    
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: 300;
+            color: #00917C;
+
+            
+        }
+        img {
+            display: block;
+            width: 500px;
+            margin: 0 auto;
+            padding: 4px;
+            border-radius: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 25px;
+            color: #00917C;
+        }
+
+        button {
+        margin: 20px auto;
+        display: block;
+        color: #00917C;
+        font-size: 16px;
+        font-weight:bolder;
+        background: transparent;
+        padding: 15px 20px;
+        border: 1px solid #00917C;
+        border-radius: 30px;
+        box-shadow: 2px 5px 5px rgb(0 0 0 / 20%);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+          background: #00917C;
+          color: white;
+          cursor: pointer;
+
+      }
+
+      .content {
+          background-image: linear-gradient(to right, #9ECCA4, #CEE6B4);
+          padding: 20px;
+          margin: 0px 300px 0px 300px;
+      }
+
+      .type {
+          text-decoration: underline;
+      }
+    </style>
+    <div class =content>
+    <h1>🌱<br>Veganuary 2022 </h1>
+    <hr>
+    <img src= https://s3.amazonaws.com/shecodesio-production/uploads/files/000/012/376/original/Vegan_Illustration.jpeg?1625505768/>
+    <hr>
+     <h2>What is Veganism?</h2>
+    <p>
+      <strong>Veganism</strong> is the practice of abstaining from the use of animal products,
+      particularly in diet, and an associated philosophy that rejects the
+      commodity status of animals. An individual who follows the diet or
+      philosophy is known as a vegan. Distinctions may be made between several
+      categories of veganism. <span class = type>Dietary vegans,</span> also known as <em>strict
+      vegetarians</em> refrain from consuming meat, eggs, dairy products, and any
+      other animal-derived substances. An <span class = type>ethical vegan</span>, also known as a <em>moral
+      vegetarian</em>, is someone who not only follows a vegan diet but extends the
+      philosophy into other areas of their lives, and opposes the use of animals
+      for any purpose. Another term is <em>environmental veganism</em>, which refers to
+      the avoidance of animal products on the premise that the industrial
+      farming of animals is environmentally damaging and unsustainable.
+    </p>
+    <a href = https://en.wikipedia.org/wiki/Veganism>Read on Wikipedia</a>
+    <button>Sign up for Veganuary!</button>
+    </div>
+    <script>
+        function signup() {
+            let name = prompt("What is your name?");
+            let status = prompt("Are you vegan, vegetarian, or omnivore?");
+            let heading = document.querySelector("h2");
+
+            if (status === "vegan") {
+                alert("Awesome, " + name + "! Keep up the good work! 🥑");
+            } else {
+               if (status === "vegetarian") {
+                alert("Time to give up that dairy, " + name + "!  🐄");
+            } else {
+                heading.innerHTML = "Awesome! Welcome aboard, " + name + "! 🥳";
+            }
+        }
+        }
+        
+        let inquiryButton = document.querySelector("button");
+
+        inquiryButton.addEventListener("click" , signup);
+
+    </script>
+  </body>
+</html>
